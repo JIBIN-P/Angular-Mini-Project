@@ -69,6 +69,7 @@ export class LibraryListComponent implements OnInit {
       return this.libraries.filter((library: ILibrary) => 
          library.libraryName.toLocaleLowerCase().indexOf(filterBy) !== -1);
    }
+   // Search MDN for Array filter to get it clear.
 
 	ngOnInit(): void {
 		console.log('This is OnInit');
