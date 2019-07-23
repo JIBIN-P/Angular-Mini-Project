@@ -14,7 +14,7 @@ export class LibraryListComponent implements OnInit {
    
    constructor() {
       this.filteredLibraries = this.libraries;
-      this.listFilter = 'a';
+      this.listFilter = '';
    }
 
 	_listFilter = '';

@@ -40,7 +40,9 @@
                <td> <a href="{{library.libraryLink | lowercase}}">{{library.libraryLink}}</a></td>
                <td>{{library.librarySize}}</td>
                <td>{{library.downloads}}</td>
-               <td>{{library.starRating}}</td>
+               <td>
+                  <app-star></app-star>
+               </td>
                <td>{{library.releaseDate | date:'dd/MM/yy'}}</td>
             </tr>
          </tbody>
