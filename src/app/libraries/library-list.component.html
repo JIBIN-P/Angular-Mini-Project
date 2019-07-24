@@ -41,7 +41,7 @@
                <td>{{library.librarySize}}</td>
                <td>{{library.downloads}}</td>
                <td>
-                  <app-star></app-star>
+                  <app-star [rating]='library.starRating'></app-star>
                </td>
                <td>{{library.releaseDate | date:'dd/MM/yy'}}</td>
             </tr>

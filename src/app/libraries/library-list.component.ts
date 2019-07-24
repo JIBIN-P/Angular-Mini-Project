@@ -34,7 +34,7 @@ export class LibraryListComponent implements OnInit {
 			libraryLink: 'https://angular.io/',
 			librarySize: '2 Mb',
 			downloads: 1000000103,
-			starRating: 4.8,
+			starRating: 3,
 			releaseDate: new Date(2016, 4, 9),
 			imageUrl: 'https://cdn-images-1.medium.com/max/803/1*2GumncRemjwIHayYT0dBdw.png'
 		},
@@ -44,7 +44,7 @@ export class LibraryListComponent implements OnInit {
 			libraryLink: 'https://reactjs.org/',
 			librarySize: '16 Kb',
 			downloads: 1500001034,
-			starRating: 4.9,
+			starRating: 4,
 			releaseDate: new Date(2014, 4, 12),
 			imageUrl: 'https://arcweb.co/wp-content/uploads/2016/10/react-logo-1000-transparent.png'
 		},
@@ -54,7 +54,7 @@ export class LibraryListComponent implements OnInit {
 			libraryLink: 'https://vuejs.org/',
 			librarySize: '20 Kb',
 			downloads: 1000000120,
-			starRating: 4.9,
+			starRating: 4.5,
 			releaseDate: new Date(2017, 7, 19),
 			imageUrl: 'https://www.vuemastery.com/images/lgo-vue-news.svg'
 		}
