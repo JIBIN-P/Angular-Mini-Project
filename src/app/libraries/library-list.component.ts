@@ -74,4 +74,8 @@ export class LibraryListComponent implements OnInit {
 	ngOnInit(): void {
 		console.log('This is OnInit');
 	}
+
+	onRatingClicked(message: string): void {
+		this.pageTitle = 'Library list: ' + message;
+	}
 }
