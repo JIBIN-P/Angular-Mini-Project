@@ -3,6 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "noImplicitAny": false,
     "sourceMap": true,
     "declaration": false,

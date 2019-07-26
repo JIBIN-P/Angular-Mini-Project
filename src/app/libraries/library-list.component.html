@@ -36,7 +36,11 @@
                   <img class="img-fluid"  [ngClass]="showImage ? 'visible':'invisible'" [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [src]='library.imageUrl' [alt]='library.libraryName' [title]='library.libraryName'>
                   <!-- Could also use *ngIf to check the showImage but it takes a lot of time than the native CSS -->
                </td>
-               <td>{{library.libraryName | convertToSpaces:'-'}}</td>
+               <td>
+                  <a [routerLink]="['/library', library.libraryId]">
+                     {{library.libraryName | convertToSpaces:'-'}}
+                  </a>
+               </td>
                <td> <a href="{{library.libraryLink | lowercase}}">{{library.libraryLink}}</a></td>
                <td>{{library.librarySize}}</td>
                <td>{{library.downloads}}</td>
