@@ -1,0 +1,55 @@
+<div class="card">
+   <div class="card-header">
+      {{pageTitle}} List
+   </div>
+   <div class="card-body">
+      <div class="row">
+         <div class="col-md-2">Filter By:</div>
+         <div class="col-md-4">
+            <input type="text" name="filteredBy" [(ngModel)]="listFilter" >
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <h3>Filtered By: {{listFilter}}</h3>
+         </div>
+      </div>
+   </div>
+   <div class="table-responsive">
+      <table class="table" *ngIf="libraries && libraries.length">
+         <thead>
+            <tr>
+               <th>
+                  <button class="btn btn-primary" (click)='toggleImage()'>{{showImage ? 'Hide' : 'Show'}} Image</button>
+               </th>
+               <th>Library</th>
+               <th>Link</th>
+               <th>Size</th>
+               <th>Downloads</th>
+               <th>Rating</th>
+               <th>Release Date</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor='let library of filteredLibraries'>
+               <td>
+                  <img class="img-fluid"  [ngClass]="showImage ? 'visible':'invisible'" [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [src]='library.imageUrl' [alt]='library.libraryName' [title]='library.libraryName'>
+                  <!-- Could also use *ngIf to check the showImage but it takes a lot of time than the native CSS -->
+               </td>
+               <td>
+                  <a [routerLink]="['/library', library.libraryId]">
+                     {{library.libraryName | convertToSpaces:'-'}}
+                  </a>
+               </td>
+               <td> <a href="{{library.libraryLink | lowercase}}">{{library.libraryLink}}</a></td>
+               <td>{{library.librarySize}}</td>
+               <td>{{library.downloads}}</td>
+               <td>
+                  <app-star [rating]='library.starRating' (ratingClicked)='onRatingClicked($event)'></app-star>
+               </td>
+               <td>{{library.releaseDate | date:'dd/MM/yy'}}</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

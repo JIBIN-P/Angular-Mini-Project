@@ -13,7 +13,7 @@ export class LibraryListComponent implements OnInit {
 	imageMargin = 2;
 	showImage = false;
 	errorMessage: string;
-
+   
    constructor(private libraryService: LibraryService) {
 	}
 
@@ -32,10 +32,10 @@ export class LibraryListComponent implements OnInit {
 	toggleImage(): void {
 		this.showImage = !this.showImage;
    }
-
+   
    performFilter(filterBy: string): ILibrary[] {
       filterBy = filterBy.toLocaleLowerCase();
-      return this.libraries.filter((library: ILibrary) =>
+      return this.libraries.filter((library: ILibrary) => 
          library.libraryName.toLocaleLowerCase().indexOf(filterBy) !== -1);
    }
    // Search MDN for Array filter to get it clear.
@@ -48,7 +48,7 @@ export class LibraryListComponent implements OnInit {
 			},
 			error => this.errorMessage = error as any
 		);
-
+		
 	}
 
 	onRatingClicked(message: string): void {
